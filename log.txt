@@ -1,0 +1,5 @@
+commit b4c2e9dee7a4decab316d37d4c8aba424d301e92 (HEAD -> logging, master)
+Author: Kiko <kikopopcev@gmail.com>
+Date:   Sun Mar 25 23:08:34 2018 +0200
+
+    modify l1.txt
