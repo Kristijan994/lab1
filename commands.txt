@@ -1,0 +1,40 @@
+mkdir lab1
+cd lab1
+git init
+touch l1.txt  -- create editable txt file --
+nano l1.txt  -- edit the txt document --
+git add .	-- pred commit mora da se vnese --
+git commit -m "initial commit"
+nano l1.txt
+git add .
+git commit -m "Modify l1.txt"
+git clone https://github.com/Kristijan994/lab1.git   -- kloniranje na lokalen so github repositorium --
+git remote add origin https://github.com/Kristijan994/lab1.git  -- # Sets the new remote --
+git remote -v	-- # Verifies the new remote URL --
+git pull origin master			-- Prvo pravime pull za da mozhe da go pushneme --
+git pull origin master --rebase		-- Ako ima greshki pri push, mora so rebase pull pa potoa push --
+git push origin master    		-- Push to github --
+nano l1.txt  -- Promena vo l1.txt --
+git log  -- Za da ja vidime shifrata od posledniot commit (ex. b4cee9)
+git checkout b4cee9 l1.txt    -- ja vrakjame od modified vo posledniot git commit --
+git add .
+git reset HEAD l1.txt	-- resetiranje ako vekje e addnat (git add .) file-ot, go vrakja vo staging area--
+git add ...
+git commit -c ORIG_HEAD
+git checkout -b logging     -- Kreiran e nov branch so ime logging --
+mkdir log.txt   	-- Kreirana e nova datoteka vo branchot logging --
+git push --set-upstream origin logging   -- push na logging bracnhot vo github repositorium --
+git checkout master	-- sync & merge --
+git pull		-- sync & merge --
+git checkout logging
+git merge master	-- sync & merge --
+git checkout master	-- sync & merge --
+git merge logging	-- sync & merge --
+git push origin	master	-- sync & merge --
+git checkout -b "allcomands"	-- kreiranje nov branch --
+mkdir commands.txt	-- kreiranje datoteka --
+nano commands.txt
+git push origin master
+git add .
+git commit -m ""
+git rebase allcommands master
